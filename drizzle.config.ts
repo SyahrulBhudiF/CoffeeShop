@@ -1,4 +1,4 @@
-import {defineConfig} from 'drizzle-kit';
+import {defineConfig, type Config} from 'drizzle-kit';
 // @ts-ignore
 
 // @ts-ignore
@@ -8,5 +8,5 @@ export default defineConfig({
     dialect: 'postgresql', // 'postgresql' | 'mysql' | 'sqlite'
     dbCredentials: {
         url: process.env.VITE_DATABASE_URL,
-    }
-});
+    },
+})satisfies Config;

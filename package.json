@@ -5,6 +5,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "migrate": "bun run src/lib/server/database/migrate.ts",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
@@ -28,6 +29,7 @@
   "dependencies": {
     "@types/node": "^22.5.5",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
     "felte": "^1.2.14",
     "postgres": "^3.4.4",

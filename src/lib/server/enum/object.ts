@@ -1,0 +1,61 @@
+// Enum untuk typesEnum
+export enum TypesEnum {
+    Arabica = 'Arabica',
+    Robusta = 'Robusta',
+    Liberica = 'Liberica',
+    Ekselsa = 'Ekselsa',
+}
+
+// Enum untuk coffeeProcessing
+export enum CoffeeProcessing {
+    Washed = 'Washed',
+    Natural = 'Natural',
+    Honey = 'Honey',
+    Hybrid = 'Hybrid',
+    SemiWashed = 'Semi-washed',
+    PulpedNatural = 'Pulped natural',
+    Miel = 'Miel',
+    Anaerobic = 'Anaerobic',
+    Aerobic = 'Aerobic',
+    CarbonicMaceration = 'Carbonic Maceration',
+    Monsooned = 'Monsooned',
+    Decaffeinated = 'Decaffeinated',
+    Lactic = 'Lactic',
+}
+
+// Enum untuk coffeeNotesEnum
+export enum CoffeeNotesEnum {
+    Citrus = 'Citrus',
+    Berry = 'Berry',
+    StoneFruit = 'StoneFruit',
+    TropicalFruit = 'TropicalFruit',
+    Jasmin = 'Jasmin',
+    Rose = 'Rose',
+    Chamomile = 'Chamomile',
+    Lavender = 'Lavender',
+    Almond = 'Almond',
+    Hazelnut = 'Hazelnut',
+    Walnut = 'Walnut',
+    Pecan = 'Pecan',
+    Chocolate = 'Chocolate',
+    Caramel = 'Caramel',
+    Honey = 'Honey',
+    Vanilla = 'Vanilla',
+    BrownSugar = 'BrownSugar',
+    Cinnamon = 'Cinnamon',
+    Nutmeg = 'Nutmeg',
+    BlackPepper = 'BlackPepper',
+    Clove = 'Clove',
+    Herbal = 'Herbal',
+    Woody = 'Woody',
+    Tobacco = 'Tobacco',
+    Leather = 'Leather',
+    Butter = 'Butter',
+    Umami = 'Umami',
+    Roasted = 'Roasted',
+    Smoky = 'Smoky',
+    Winey = 'Winey',
+    Fermented = 'Fermented',
+    Bright = 'Bright',
+    Acidic = 'Acidic',
+}

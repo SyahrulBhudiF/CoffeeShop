@@ -1,9 +1,100 @@
 {
-  "id": "62a88d8f-0066-4ace-9785-124289deb466",
+  "id": "b476f280-a51b-4671-aad9-dfc32f81706c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.coffee_notes": {
+      "name": "coffee_notes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "items_id": {
+          "name": "items_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "notes": {
+          "name": "notes",
+          "type": "notes",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "coffee_notes_items_id_items_id_fk": {
+          "name": "coffee_notes_items_id_items_id_fk",
+          "tableFrom": "coffee_notes",
+          "tableTo": "items",
+          "columnsFrom": [
+            "items_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.items": {
+      "name": "items",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "processing": {
+          "name": "processing",
+          "type": "processing",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type": {
+          "name": "type",
+          "type": "type",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "price": {
+          "name": "price",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "public.users": {
       "name": "users",
       "schema": "",
@@ -33,7 +124,76 @@
       "uniqueConstraints": {}
     }
   },
-  "enums": {},
+  "enums": {
+    "public.notes": {
+      "name": "notes",
+      "schema": "public",
+      "values": [
+        "Citrus",
+        "Berry",
+        "StoneFruit",
+        "TropicalFruit",
+        "Jasmin",
+        "Rose",
+        "Chamomile",
+        "Lavender",
+        "Almond",
+        "Hazelnut",
+        "Walnut",
+        "Pecan",
+        "Chocolate",
+        "Caramel",
+        "Honey",
+        "Vanilla",
+        "BrownSugar",
+        "Cinnamon",
+        "Nutmeg",
+        "BlackPepper",
+        "Clove",
+        "Herbal",
+        "Woody",
+        "Tobacco",
+        "Leather",
+        "Butter",
+        "Umami",
+        "Roasted",
+        "Smoky",
+        "Winey",
+        "Fermented",
+        "Bright",
+        "Acidic"
+      ]
+    },
+    "public.processing": {
+      "name": "processing",
+      "schema": "public",
+      "values": [
+        "Washed",
+        "Natural",
+        "Honey",
+        "Hybrid",
+        "Semi-washed",
+        "Pulped natural",
+        "Miel",
+        "Anaerobic",
+        "Aerobic",
+        "Carbonic Maceration",
+        "Monsooned",
+        "Decaffeinated",
+        "Lactic"
+      ]
+    },
+    "public.type": {
+      "name": "type",
+      "schema": "public",
+      "values": [
+        "Arabica",
+        "Robusta",
+        "Liberica",
+        "Ekselsa"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "_meta": {
