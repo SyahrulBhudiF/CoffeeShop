@@ -1,4 +1,4 @@
-import db from "$config/connect";
+import db from "$lib/server/connect";
 
 export const load = async ({params}) => {
     return {
